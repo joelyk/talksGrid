@@ -11,9 +11,21 @@ if(isset($_POST['valider'])){
     ');
     $checkIfUserExits->execute([$user_pseudo]);
      
-     if($checkIfUserExits->rowCount()==0){
-        $errorMsg="Votre Pseudo ";
-     }
+     if($checkIfUserExits->rowCount()>0){
+        $userInfos=$checkIfUserExits->fetch();
+         if(password_verify($user_motdepasse, $userInfos['motdepasse'])){
+        //Authentification de l'utilisateur !
+            $_SESSION['auth']=true;
+        $_SESSION['id'] = $userInfos['id'];
+        $_SESSION['pseudo'] = $userInfos['pseudo'];
+        $_SESSION['nom'] = $userInfos['nom'];
+        $_SESSION['prenom'] = $userInfos['prenom'];
+        header('Location: index.php');
+               
+         }else{$errorMsg="Votre mot de passe est incorrecte !";}
+ 
+     }else{$errorMsg="Votre Pseudo est incorrecte !";}
+
     }else{
         $errorMsg="Veuillez completer tous les champs svp";
     }

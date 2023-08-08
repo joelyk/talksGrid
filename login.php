@@ -1,9 +1,11 @@
+<?php require('actions/loginAction.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
    <?php include 'includes/head.php'; ?>
 </head>
 <body>
+   <?php include 'includes/navbar.php'; ?>
 <div class="container mt-5">
         <h2>Inscription au Site</h2>
         <form method="post">
