@@ -9,7 +9,7 @@ if(isset($_POST['valider'])){
         $user_motdepasse = password_hash($_POST['motdepasse'], PASSWORD_BCRYPT);
         
         $checkIfUserAlreadyExists =  $bdd->prepare('
-        SELECT pseudo FROM users WHERE pseudo = ?'
+              SELECT pseudo FROM users WHERE pseudo = ?'
          );
         $checkIfUserAlreadyExists->execute(array($user_pseudo));
 

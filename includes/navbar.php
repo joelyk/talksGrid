@@ -1,19 +1,16 @@
-
-<nav class="navbar navbar-expand-lg navbar-light bg-black>
-  <a class="navbar-brand" href="#">TalksGrid</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="index.php">Questions <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="publish.php">Saisir Questions</a>
-      </li>
-
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="index.php">TalksGrid</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="index.php">Home</a></li>
+      <li><a href="#"> les Questions </a></li>
+      <li><a href="publish.php">Creer une Question</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="../actions/signupAction.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="../actions/logoutAction.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
     </ul>
   </div>
-</nav>
+</nav> 

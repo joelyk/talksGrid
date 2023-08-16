@@ -15,7 +15,7 @@ if(isset($_POST['valider'])){
         $userInfos=$checkIfUserExits->fetch();
          if(password_verify($user_motdepasse, $userInfos['motdepasse'])){
         //Authentification de l'utilisateur !
-            $_SESSION['auth']=true;
+        $_SESSION['auth']=true;
         $_SESSION['id'] = $userInfos['id'];
         $_SESSION['pseudo'] = $userInfos['pseudo'];
         $_SESSION['nom'] = $userInfos['nom'];

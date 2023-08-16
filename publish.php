@@ -1,14 +1,15 @@
-<?php require('actions/securityAction.php') ?>
+<?php 
+  require('actions/securityAction.php');
+  require('actions/questions/publishAction.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+<?php include 'includes/head.php'; ?>
 <body>
+<?php include 'includes/navbar.php'; ?>
 <div class="container mt-5">
-        <h2>Publication d'une Article</h2>
+        <h2>Publication d'un Article</h2>
         <form method="post">
             <?php 
             if (isset($errorMsg)){echo"<p> $errorMsg </p>";}
@@ -26,7 +27,7 @@
             </div>
             <br>
             <br>
-            <button type="submit" class="btn btn-primary" name="valider">Se Connecter </button>
+            <button type="submit" class="btn btn-primary" name="valider">Publier la question ! </button>
 
             <br><br>
             <a href="signup.php"> Je m'inscris !</a>
